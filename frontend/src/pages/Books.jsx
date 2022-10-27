@@ -25,8 +25,6 @@ const Books = () => {
 
   return (
     <main>
-      <h1>Books</h1>
-
       <div className="books">
         {books?.map((book) => (
           <div className="book" key={book.id}>
