@@ -10,7 +10,6 @@ const Layout = () => {
       <Header />
       <Outlet />
       <Footer />
-      <AddButton />
     </ScrollToTop>
   );
   return content;

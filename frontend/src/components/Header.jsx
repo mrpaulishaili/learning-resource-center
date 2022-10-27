@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   let content = (
     <>
       <header className="header desktop">
         <div className="top-header container">
-          <Link to={'/'} className="logo">
+          <NavLink to={'/'} className="logo">
             📚 <span>Learning Resource Center</span>
-          </Link>
+          </NavLink>
 
           <div className="search-box">
             <input type="search" name="" id="" />
@@ -19,27 +19,52 @@ const Header = () => {
           {/* Nav */}
           <nav>
             <div className="">
-              <Link to={'/books'}>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                to={'/books'}
+              >
                 📔 <span>Books</span>
-              </Link>
-              <Link to={'/videos'}>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                to={'/videos'}
+              >
                 📹 <span>Videos</span>
-              </Link>
-              <Link to={'/audios'}>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                to={'/audios'}
+              >
                 🔉 <span>Audios</span>
-              </Link>
-              <Link to={'/articles'}>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                to={'/articles'}
+              >
                 📰 <span>Articles</span>
-              </Link>
-              <Link to={'/wishlists'}>🌠 Reading List</Link>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                to={'/wishlists'}
+              >
+                🌠 Reading List
+              </NavLink>
             </div>
 
             <div className="">
-              <Link className="store" to={'/store'}>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : ' store')}
+                to={'/store'}
+              >
                 🛒
                 <span>2</span>
-              </Link>
-              <Link to={'/dashboard'} className="user">
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? 'active user' : 'user'
+                }
+                to={'/dashboard'}
+              >
                 <span className="name">John</span>
                 <div className="avatar">
                   <img
@@ -50,16 +75,16 @@ const Header = () => {
                     width={20}
                   />
                 </div>
-              </Link>
+              </NavLink>
             </div>
           </nav>
         </div>
       </header>
       <header className="mobile header">
         <div className="top-header container">
-          <Link to={'/'} className="logo">
+          <NavLink to={'/'} className="logo">
             📚 <span>Learning Resource Center</span>
-          </Link>
+          </NavLink>
 
           <div className="search-box">🔍</div>
         </div>
@@ -68,26 +93,48 @@ const Header = () => {
           {/* Nav */}
           <nav>
             <div className="">
-              <Link to={'/books'}>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                to={'/books'}
+              >
                 📔 <span>Books</span>{' '}
-              </Link>
-              <Link to={'/videos'}>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                to={'/videos'}
+              >
                 📹 <span>Videos</span>
-              </Link>
-              <Link to={'/audios'}>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                to={'/audios'}
+              >
                 🔉 <span>Audios</span>
-              </Link>
-              <Link to={'/articles'}>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                to={'/articles'}
+              >
                 📰 <span>Articles</span>
-              </Link>
+              </NavLink>
             </div>
 
             <div className="">
-              <Link className="store" to={'/store'}>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? 'active store' : 'store'
+                }
+                to={'/store'}
+              >
                 🛒
                 <span>2</span>
-              </Link>
-              <Link to={'/dashboard'} className="user">
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? 'active user' : 'user'
+                }
+                to={'/dashboard'}
+              >
                 <span className="name">John</span>
                 <div className="avatar">
                   <img
@@ -98,7 +145,7 @@ const Header = () => {
                     width={20}
                   />
                 </div>
-              </Link>
+              </NavLink>
             </div>
           </nav>
         </div>

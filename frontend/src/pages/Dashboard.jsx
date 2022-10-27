@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import { Link } from 'react-router-dom';
+import AddButton from '../components/AddButton';
 
 const Dashboard = () => {
   const [books, setBooks] = useState([]);
@@ -48,6 +49,8 @@ const Dashboard = () => {
           </div>
         ))}
       </div>
+
+      <AddButton />
     </main>
   );
 };
