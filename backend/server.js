@@ -14,12 +14,16 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use('/books', booksRoute);
+app.use('/api/books', booksRoute);
 
 app.get('/', (req, res) => {
-  res.send('Hello this is the backend');
+  res.send('Welcome to Learning Resource Center API Server');
+});
+
+app.get('/api', (req, res) => {
+  res.send('Learning Resource Center API Endpoint');
 });
 
 app.listen(process.env.PORT, () => {
-  console.log(`${BASE_URL()}:${process.env.PORT}`);
+  console.log(`${BASE_URL()}`);
 });
