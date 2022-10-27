@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 
 import booksRoute from './routes/books.js';
+import { BASE_URL } from './config.js';
 
 dotenv.config();
 
@@ -20,5 +21,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
-  console.log(`http://localhost:${process.env.PORT}`);
+  console.log(`${BASE_URL()}:${process.env.PORT}`);
 });
