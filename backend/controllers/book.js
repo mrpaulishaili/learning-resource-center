@@ -1,11 +1,19 @@
 import mysql from 'mysql2';
 
 // DB CONNECTION
+
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'mrpaulishaili@2022.',
-  database: 'books_store',
+  host:
+    process.env.NODE_ENV === 'development'
+      ? 'localhost'
+      : 'sql8.freesqldatabase.com',
+  user: process.env.NODE_ENV === 'development' ? 'root' : 'sql8529607',
+  password:
+    process.env.NODE_ENV === 'development'
+      ? 'mrpaulishaili@2022.'
+      : 'HzHApTIegc',
+  database:
+    process.env.NODE_ENV === 'development' ? 'books_store' : 'sql8529607',
 });
 
 // ADD BOOK
