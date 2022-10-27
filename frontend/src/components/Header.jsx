@@ -6,7 +6,7 @@ const Header = () => {
       <header className="header desktop">
         <div className="top-header container">
           <Link to={'/'} className="logo">
-            Learning Resource Center
+            📚 <span>Learning Resource Center</span>
           </Link>
 
           <div className="search-box">
@@ -58,7 +58,7 @@ const Header = () => {
       <header className="mobile header">
         <div className="top-header container">
           <Link to={'/'} className="logo">
-            Learning Resource Center
+            📚 <span>Learning Resource Center</span>
           </Link>
 
           <div className="search-box">🔍</div>
