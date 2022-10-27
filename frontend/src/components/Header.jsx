@@ -61,10 +61,7 @@ const Header = () => {
             Learning Resource Center
           </Link>
 
-          <div className="search-box">
-            <input type="search" name="" id="" />
-            <button>search</button>
-          </div>
+          <div className="search-box">🔍</div>
         </div>
 
         <div className="container">
