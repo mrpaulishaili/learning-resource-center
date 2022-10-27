@@ -131,6 +131,7 @@ html {
     text-align: left;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
 
     span {
       letter-spacing: -0.1px;
@@ -173,6 +174,32 @@ html {
       height: 4rem;
     }
 
+    .search-box {
+      background-color: #fff;
+      border-radius: 0.5rem;
+      border: 2px solid transparent;
+
+      &:hover,
+      &:focus-within {
+        border-color: lightgray;
+
+        button {
+          background-color: lightgray;
+        }
+      }
+
+      input {
+        background-color: transparent;
+        border: none;
+        padding: 0.35rem 1rem;
+        outline: none;
+      }
+
+      button {
+        background-color: transparent;
+      }
+    }
+
     nav {
       display: flex;
       align-items: center;
@@ -184,7 +211,7 @@ html {
       box-shadow: 0 3px 5px rgba(51, 51, 51, 0.15);
 
       > div {
-        gap: 0.8rem;
+        gap: 2rem;
         display: flex;
       }
 
@@ -227,6 +254,13 @@ html {
       border-radius: 50%;
       border: 1px solid lightgray;
       background-color: #fff;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
 
     &.mobile {
@@ -239,7 +273,9 @@ html {
 
       nav {
         > div {
-          gap: 1rem;
+          &:last-child {
+            gap: 1rem;
+          }
         }
       }
 
@@ -257,13 +293,13 @@ html {
         }
       }
 
-      @media screen and (max-width: 520px) {
+      @media screen and (max-width: 700px) {
         display: flex;
       }
     }
 
     &.desktop {
-      @media screen and (max-width: 520px) {
+      @media screen and (max-width: 700px) {
         display: none;
       }
     }

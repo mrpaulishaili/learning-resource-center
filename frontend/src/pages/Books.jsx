@@ -28,7 +28,7 @@ const Books = () => {
       <h1>Books</h1>
 
       <div className="books">
-        {books.map((book) => (
+        {books?.map((book) => (
           <div className="book" key={book.id}>
             {book.price ? <div className="isPremium">🏆</div> : ''}
 

@@ -25,5 +25,5 @@ app.get('/api', (req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
-  console.log(`${BASE_URL()}`);
+  process.env.NODE_ENV === 'development' && console.log(`${BASE_URL()}`);
 });
