@@ -1,0 +1,22 @@
+.addBtn {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+
+  position: fixed;
+
+  bottom: 2rem;
+  right: 2rem;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f4f4f4;
+  }
+}
