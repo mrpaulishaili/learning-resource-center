@@ -184,8 +184,8 @@ html {
       box-shadow: 0 3px 5px rgba(51, 51, 51, 0.15);
 
       > div {
+        gap: 0.8rem;
         display: flex;
-        gap: 2rem;
       }
 
       a {
@@ -237,9 +237,24 @@ html {
         gap: 0.1rem;
       }
 
+      nav {
+        > div {
+          gap: 1rem;
+        }
+      }
+
       .user {
         flex-direction: row-reverse;
         gap: 0.5rem;
+
+        .name {
+          display: none;
+        }
+
+        .avatar {
+          height: 1.7rem;
+          width: 1.75rem;
+        }
       }
 
       @media screen and (max-width: 520px) {
