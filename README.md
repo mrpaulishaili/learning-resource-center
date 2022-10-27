@@ -15,3 +15,5 @@ Accoring to Wikipedia, a Learning Resource Center (LRC) is a facility within a s
 ## What are the Rules around being an efffective member of this larning resource center?
 
 **For more, you can reach out via** [Telegram](https://t.me/devpacademy)
+
+## Become a contributor.

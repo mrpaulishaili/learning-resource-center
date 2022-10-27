@@ -4,6 +4,7 @@ $pri-color: rgb(64, 216, 64);
   margin: 0;
   padding: 0;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -151,8 +152,8 @@ html {
   // HEADER
 
   header {
-    padding: 1rem 5%;
     display: flex;
+    flex-direction: column;
     background-color: antiquewhite;
 
     .container {
@@ -162,11 +163,25 @@ html {
       justify-content: space-between;
     }
 
+    .top-header {
+      padding: 1rem 5%;
+      height: 4rem;
+    }
+
     nav {
       display: flex;
-      gap: 1rem;
       align-items: center;
+      justify-content: space-between;
       font-size: 0.9rem;
+      width: 100%;
+      padding: 1rem 5%;
+      background-color: #fff;
+      box-shadow: 0 3px 5px rgba(51, 51, 51, 0.15);
+
+      > div {
+        display: flex;
+        gap: 1rem;
+      }
 
       a {
         text-decoration: none;
@@ -181,9 +196,7 @@ html {
       align-items: center;
       flex-direction: row-reverse;
       padding-left: 1rem;
-      padding-right: 1rem;
       border-left: 1px solid lightgray;
-      border-right: 1px solid lightgray;
       color: rgb(4, 154, 195);
     }
 
