@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 import axios from 'axios';
-import { API_URL } from '../config/config';
 
 const Books = () => {
   const [books, setBooks] = useState([]);
@@ -10,7 +9,7 @@ const Books = () => {
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const res = await axios.get(`${API_URL}/books`);
+        const res = await axios.get(`http://localhost:5000/books`);
 
         setBooks(res.data);
       } catch (error) {
