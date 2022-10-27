@@ -273,6 +273,8 @@ html {
 
       nav {
         > div {
+          gap: 1.5rem;
+
           &:last-child {
             gap: 1rem;
           }
