@@ -272,12 +272,13 @@ body {
 
       a {
         flex-direction: column;
+        align-items: center;
         gap: 0.1rem;
       }
 
       nav {
         > div {
-          gap: 1.5rem;
+          gap: 1.42rem;
 
           &:last-child {
             gap: 1rem;
