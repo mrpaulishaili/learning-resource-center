@@ -473,13 +473,15 @@ a {
 @import './styles/pages/Index';
 
 @media screen and (max-width: 620px) {
-  .books {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
+  .app {
+    .books {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
 
-    .book {
-      width: 100%;
+      .book {
+        width: 100%;
+      }
     }
   }
 }
