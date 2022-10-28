@@ -2,47 +2,30 @@
   padding: 0 !important;
 
   .hero {
-    display: flex;
-    height: 90vh;
+    height: 60vh;
     width: 100%;
-    justify-content: center;
 
     .speech {
-      flex: 2;
+      background-color: lightgray;
       height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      text-align: left;
-      padding: 1rem 5%;
-
-      h1 {
-        font-size: 2rem;
-        line-height: 1;
-        color: #333;
-      }
+      border-radius: 1rem;
     }
+  }
 
-    .illustration {
-      flex: 3;
-      height: 100%;
+  .section {
+    padding: 2rem 5%;
 
-      background-color: aquamarine;
+    &-title {
+      text-align: left;
+      color: #333;
     }
   }
 
   @media screen and (max-width: 680px) {
-    .hero {
-      flex-direction: column;
-      .speech {
-        flex: 100%;
-        height: 40%;
-      }
-
-      .illustration {
-        flex: 100%;
-        height: 60%;
-      }
-    }
   }
 }

@@ -11,7 +11,7 @@ const Header = () => {
 
           <div className="search-box">
             <input type="search" name="" id="" />
-            <button>search</button>
+            <button>🔍 search</button>
           </div>
         </div>
 
