@@ -42,51 +42,39 @@ body {
 
     .book {
       position: relative;
-      padding: 1.5rem 1rem;
-      border: 1px solid lightgray;
+      box-shadow: 0 3px 5px rgba(51, 51, 51, 0.15);
       border-radius: 0.5rem;
       flex: 200px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      max-width: 200px;
-
+      max-width: 180px;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      text-align: left;
       line-height: 1.2;
+      overflow: hidden;
 
-      .isPremium {
-        position: absolute;
-        top: 0.75rem;
-        left: 0.65rem;
-        filter: grayscale(0.365);
-        font-size: 0.8rem;
+      &:hover {
+        cursor: pointer;
       }
 
       img {
         width: 100%;
-        max-width: 150px;
-        filter: grayscale(0);
-        border-radius: 0.25rem;
-        max-height: 180px;
+        max-height: 240px;
         object-fit: cover;
         background-color: antiquewhite;
-      }
-
-      h3 {
-        margin-top: 0.5rem;
-        font-size: 0.8rem;
-        // font-weight: 500;
-        color: #333;
       }
 
       p {
         font-size: 0.8rem;
         text-align: left;
-        margin-bottom: 1rem;
+        padding: 0 0.5rem;
+        font-weight: 600;
+        color: #333;
       }
 
       button {
         width: 100%;
-
         &.deleteBtn {
           background-color: rgb(199, 14, 14);
           color: #f4f4f4;

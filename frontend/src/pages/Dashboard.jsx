@@ -4,13 +4,17 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import AddButton from '../components/AddButton';
 
+import { API_URL } from '../config/config';
+
+const u = API_URL;
+
 const Dashboard = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/books`);
+        const res = await axios.get(`${u}/books`);
 
         setBooks(res.data);
       } catch (error) {

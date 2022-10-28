@@ -23,31 +23,19 @@ const Header = () => {
                 className={({ isActive }) => (isActive ? 'active' : '')}
                 to={'/books'}
               >
-                📔 <span>Books</span>
+                📔 <span>Home</span>
               </NavLink>
               <NavLink
                 className={({ isActive }) => (isActive ? 'active' : '')}
                 to={'/videos'}
               >
-                📹 <span>Videos</span>
+                📹 <span>Blog</span>
               </NavLink>
               <NavLink
                 className={({ isActive }) => (isActive ? 'active' : '')}
                 to={'/audios'}
               >
-                🔉 <span>Audios</span>
-              </NavLink>
-              <NavLink
-                className={({ isActive }) => (isActive ? 'active' : '')}
-                to={'/articles'}
-              >
-                📰 <span>Articles</span>
-              </NavLink>
-              <NavLink
-                className={({ isActive }) => (isActive ? 'active' : '')}
-                to={'/wishlists'}
-              >
-                🌠 Reading List
+                🔉 <span>Be a Contributor</span>
               </NavLink>
             </div>
 
@@ -97,25 +85,19 @@ const Header = () => {
                 className={({ isActive }) => (isActive ? 'active' : '')}
                 to={'/books'}
               >
-                📔 <span>Books</span>{' '}
+                📔 <span>Home</span>
               </NavLink>
               <NavLink
                 className={({ isActive }) => (isActive ? 'active' : '')}
                 to={'/videos'}
               >
-                📹 <span>Videos</span>
+                📹 <span>Blog</span>
               </NavLink>
               <NavLink
                 className={({ isActive }) => (isActive ? 'active' : '')}
                 to={'/audios'}
               >
-                🔉 <span>Audios</span>
-              </NavLink>
-              <NavLink
-                className={({ isActive }) => (isActive ? 'active' : '')}
-                to={'/articles'}
-              >
-                📰 <span>Articles</span>
+                🔉 <span>Be a Contributor</span>
               </NavLink>
             </div>
 

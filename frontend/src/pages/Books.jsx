@@ -31,12 +31,7 @@ const Books = () => {
             {book.price ? <div className="isPremium">🏆</div> : ''}
 
             {book.cover && <img src={book.cover} alt={book.title} />}
-            <h3>{book.title}</h3>
             <p>{book.desc}</p>
-            <div className="buttons">
-              <button className="btn-success">Read</button>
-              <span>📚</span>
-            </div>
           </div>
         ))}
       </div>
