@@ -11,6 +11,7 @@ import Wishlists from './Wishlists';
 import ErrorPage from './404';
 import Mechandise from './Mechandise';
 import Dashboard from './Dashboard';
+import BeContributor from './BeContributor';
 
 export {
   Home,
@@ -26,4 +27,5 @@ export {
   ErrorPage,
   Mechandise,
   Dashboard,
+  BeContributor,
 };

@@ -128,7 +128,7 @@ a {
 
   .logo {
     color: rgba(11, 11, 11, 0.841);
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
     font-size: 1rem;
     line-height: 0.9;
@@ -155,7 +155,7 @@ a {
 
     .top-header {
       padding: 1rem 5%;
-      height: 4rem;
+      height: 5rem;
       border: 1px solid lightgray;
 
       display: flex;
@@ -294,6 +294,7 @@ a {
 
         transform: translateX(-100%);
         transform-origin: left;
+        transition: 0.3s transform ease-in-out;
 
         &.active {
           transform: translateX(0);
@@ -301,9 +302,7 @@ a {
 
         div {
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
+          width: 100%;
         }
       }
 
@@ -483,5 +482,16 @@ a {
         width: 100%;
       }
     }
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  button {
+    width: max-content;
+    margin: auto;
   }
 }

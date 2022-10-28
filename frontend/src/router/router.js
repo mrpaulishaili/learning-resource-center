@@ -10,6 +10,7 @@ import {
   Add,
   Articles,
   Audios,
+  BeContributor,
   Books,
   Dashboard,
   ErrorPage,
@@ -32,8 +33,9 @@ const router = createBrowserRouter(
         <Route path="/register" element={<Register />} />
         <Route path="/books" element={<Books />} />
         <Route path="/videos" element={<Videos />} />
-        <Route path="/audios" element={<Audios />} />
         <Route path="/articles" element={<Articles />} />
+        <Route path="/audios" element={<Audios />} />
+        <Route path="/contribute" element={<BeContributor />} />
         <Route path="/wishlists" element={<Wishlists />} />
         <Route path="/add" element={<Add />} />
         <Route path="/update/:id" element={<Update />} />

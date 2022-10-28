@@ -39,7 +39,7 @@ const Header = () => {
               </NavLink>
               <NavLink
                 className={({ isActive }) => (isActive ? 'active' : '')}
-                to={'/audios'}
+                to={'/contribute'}
                 onClick={() => setMenuOpen(!menuOpen)}
               >
                 🔉 <span>Be a Contributor</span>
@@ -63,7 +63,6 @@ const Header = () => {
                 isActive ? 'active store' : ' store'
               }
               to={'/store'}
-              onClick
             >
               🛒
               <span>2</span>
