@@ -20,10 +20,15 @@ html {
 
   scroll-behavior: smooth;
 }
+
 body {
   height: 100%;
   width: 100%;
   position: relative;
+}
+
+a {
+  text-decoration: none;
 }
 
 .app {
@@ -140,6 +145,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #fff;
+    user-select: none;
 
     a {
       gap: 0.5rem;
@@ -189,14 +195,11 @@ body {
       align-items: center;
       justify-content: space-between;
       font-size: 0.9rem;
-      width: 100%;
-      padding: 1rem 5%;
-      background-color: #fff;
-      box-shadow: 0 3px 5px rgba(51, 51, 51, 0.15);
       height: max-content;
       position: sticky;
       top: 8rem;
       left: 0;
+      gap: 1rem;
 
       > div {
         gap: 1.5rem;
@@ -220,8 +223,7 @@ body {
       gap: 0.5rem;
       align-items: center;
       flex-direction: row-reverse;
-      padding-left: 1rem;
-      border-left: 1px solid lightgray;
+      padding-left: 0.85rem;
       color: rgb(4, 154, 195);
     }
 
@@ -256,51 +258,56 @@ body {
       }
     }
 
-    &.mobile {
+    .menu-icon {
       display: none;
+    }
 
-      a {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.1rem;
+    @media screen and (max-width: 900px) {
+      .menu-icon {
+        display: flex;
+        padding-right: 1rem;
+        font-size: 1.35rem;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       nav {
-        > div {
-          gap: 1.42rem;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        flex-direction: column;
+        justify-content: start;
+        padding: 2rem;
+        height: calc(100vh - 4rem);
+        width: 100%;
+        max-width: 300px;
+        background-color: #fff;
+        box-shadow: 0 3px 5px rgba(51, 51, 51, 0.15);
+        z-index: 10;
 
-          &:last-child {
-            gap: 1rem;
-          }
+        font-size: 1rem;
+
+        transform: translateX(-100%);
+        transform-origin: left;
+
+        &.active {
+          transform: translateX(0);
         }
-      }
 
-      .user {
-        flex-direction: row-reverse;
-        gap: 0.5rem;
-
-        .name {
-          display: none;
-        }
-
-        .avatar {
-          height: 1.7rem;
-          width: 1.75rem;
+        div {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
         }
       }
 
       .search-box {
-        padding: 0.3rem;
-      }
-
-      @media screen and (max-width: 700px) {
-        display: flex;
-      }
-    }
-
-    &.desktop {
-      @media screen and (max-width: 700px) {
-        display: none;
+        input {
+          display: none;
+        }
       }
     }
   }
@@ -316,6 +323,10 @@ body {
       position: relative;
       min-height: 100%;
     }
+  }
+
+  .flex {
+    display: flex;
   }
 
   // FOOTER
