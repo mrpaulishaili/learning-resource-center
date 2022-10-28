@@ -25,8 +25,6 @@ const AllBooks = () => {
     <div className="books">
       {books?.map((book) => (
         <div className="book" key={book.id}>
-          {book.price ? <div className="isPremium">🏆</div> : ''}
-
           {book.cover && <img src={book.cover} alt={book.title} />}
           <p>{book.desc}</p>
         </div>
