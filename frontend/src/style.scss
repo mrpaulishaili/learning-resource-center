@@ -1,4 +1,4 @@
-$pri-color: rgb(64, 216, 64);
+$pri-color: rgb(92, 240, 92);
 
 * {
   margin: 0;
@@ -349,10 +349,16 @@ a {
   button {
     border: 0;
     outline: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     font-size: 0.965rem;
     border-radius: 0.25rem;
     font-weight: 600;
+    background-color: transparent;
+    border: 1px solid $pri-color;
+
+    &:hover {
+      background-color: $pri-color;
+    }
 
     cursor: pointer;
 
