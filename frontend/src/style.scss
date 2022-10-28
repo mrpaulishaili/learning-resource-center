@@ -29,6 +29,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .app {
@@ -237,9 +238,11 @@ a {
         right: -0.3rem;
         font-size: 0.9rem;
         background-color: #fff;
+        color: #333;
         height: 1.25rem;
         width: 1.25rem;
         border-radius: 50%;
+        font-weight: 600;
       }
     }
 
@@ -301,6 +304,12 @@ a {
           justify-content: center;
           align-items: center;
           text-align: center;
+        }
+      }
+
+      .user {
+        span {
+          display: none;
         }
       }
 
@@ -460,3 +469,10 @@ a {
 // IMPORT PAGES
 
 @import './styles/pages/Index';
+
+@media screen and (max-width: 620px) {
+  .books {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
