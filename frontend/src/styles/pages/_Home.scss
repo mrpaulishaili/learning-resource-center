@@ -2,7 +2,7 @@
   padding: 0 !important;
 
   .hero {
-    height: 60vh;
+    height: 50vh;
     width: 100%;
 
     .speech {
@@ -20,11 +20,12 @@
   }
 
   .section {
-    padding: 2rem 5%;
+    padding: 1rem 5%;
 
     &-title {
       text-align: left;
       color: #333;
+      line-height: 1;
     }
   }
 
