@@ -144,24 +144,18 @@ a {
 
   header {
     display: flex;
-    flex-direction: column;
     background-color: #fff;
     user-select: none;
+    padding: 1rem 5%;
+    height: 5rem;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    justify-content: space-between;
 
     a {
       gap: 0.5rem;
       display: flex;
-    }
-
-    .top-header {
-      padding: 1rem 5%;
-      height: 5rem;
-      border: 1px solid lightgray;
-
-      display: flex;
-      align-items: center;
-      width: 100%;
-      justify-content: space-between;
     }
 
     .search-box {
@@ -278,12 +272,12 @@ a {
 
       nav {
         position: absolute;
-        top: 4rem;
+        top: 5rem;
         left: 0;
         flex-direction: column;
         justify-content: start;
         padding: 2rem;
-        height: calc(100vh - 4rem);
+        height: calc(100vh - 5rem);
         width: 100%;
         max-width: 300px;
         background-color: #fff;
@@ -494,4 +488,27 @@ article {
     width: max-content;
     margin: auto;
   }
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  width: 100%;
+  max-width: 320px;
+  min-height: 300px;
+  margin: auto;
+  box-shadow: 0 3px 5px rgba(51, 51, 51, 0.15);
+  border-radius: 0.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.profile-image {
+  height: 5rem;
+  width: 5rem;
+  box-shadow: 0 3px 5px rgba(51, 51, 51, 0.15);
+  border-radius: 50%;
 }

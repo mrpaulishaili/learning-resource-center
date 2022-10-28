@@ -41,7 +41,7 @@ const router = createBrowserRouter(
         <Route path="/update/:id" element={<Update />} />
         <Route path="/store" element={<Mechandise />} />
       </Route>
-      <Route path="/dashboard/" element={<DLayout />}>
+      <Route path="/dashboard" element={<DLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="profile" element={<Profile />} />
       </Route>
