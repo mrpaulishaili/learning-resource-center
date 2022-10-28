@@ -1,6 +1,11 @@
-import { createBrowserRouter } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from 'react-router-dom';
 
 import { Layout } from '../components';
+import DLayout from '../components/DLayout';
 import {
   Add,
   Articles,
@@ -16,63 +21,31 @@ import {
   Videos,
   Wishlists,
 } from '../pages';
+import Profile from '../pages/Profile';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: '/login',
-        element: <Login />,
-      },
-      {
-        path: '/register',
-        element: <Register />,
-      },
-      {
-        path: '/books',
-        element: <Books />,
-      },
-      {
-        path: '/videos',
-        element: <Videos />,
-      },
-      {
-        path: '/audios',
-        element: <Audios />,
-      },
-      {
-        path: '/articles',
-        element: <Articles />,
-      },
-      {
-        path: '/wishlists',
-        element: <Wishlists />,
-      },
-      {
-        path: '/add',
-        element: <Add />,
-      },
-      {
-        path: '/update/:id',
-        element: <Update />,
-      },
-      {
-        path: '/store',
-        element: <Mechandise />,
-      },
-      {
-        path: '/dashboard',
-        element: <Dashboard />,
-      },
-    ],
-    errorElement: <ErrorPage />,
-  },
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/books" element={<Books />} />
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/audios" element={<Audios />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/wishlists" element={<Wishlists />} />
+        <Route path="/add" element={<Add />} />
+        <Route path="/update/:id" element={<Update />} />
+        <Route path="/store" element={<Mechandise />} />
+      </Route>
+      <Route path="/dashboard/" element={<DLayout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="profile" element={<Profile />} />
+      </Route>
+      <Route path="/*" element={<ErrorPage />} />
+    </Route>
+  )
+);
 
 export default router;

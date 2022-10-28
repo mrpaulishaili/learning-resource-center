@@ -342,7 +342,9 @@ a {
 
   footer {
     margin-top: 6rem;
-    padding: 2rem 5%;
+    padding: 1rem 5%;
+    box-shadow: 0 3px 5px rgba(51, 51, 51, 0.85);
+    font-size: 0.8rem;
 
     .container {
       display: flex;
